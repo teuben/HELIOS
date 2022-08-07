@@ -20,10 +20,10 @@ Make sure that the library and program paths are exported. On Mac Os x you shoul
 	export PATH=/Developer/NVIDIA/CUDA-10.0/bin:$PATH
 	export DYLD_LIBRARY_PATH=/Developer/NVIDIA/CUDA-10.0/lib:$DYLD_LIBRARY_PATH
 
-On a Linux machine you should have the following entries ::
+On a Linux machine you should have the following entries in your .bashrc file ::
 
 	export PATH=/usr/local/cuda-10.0/bin:$PATH
-	export DYLD_LIBRARY_PATH=/usr/local/cuda-10.0/lib:$DYLD_LIBRARY_PATH
+	export LD_LIBRARY_PATH=/usr/local/cuda-10.0/lib:$LD_LIBRARY_PATH
 
 
 2. Now, let us set up Python. Most straightforward is to download and install the Anaconda package as it contains most of the required libraries already. Get it from `here <https://www.anaconda.com/distribution/#download-section>`_. Pick Python version 3.x. Also, the command line installer is better if you are installing it on a remote server (click 'Get Additional Installers'). Alternatively, all of the Python libraries can be downloaded and installed manually with 'pip' as well. See :doc:`requirements` for more info on that.
