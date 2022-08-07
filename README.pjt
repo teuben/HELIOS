@@ -1,3 +1,62 @@
 # comments on the "make" branch
 
 - after "make input" species.dat disappeared, but it's there in "make input2"
+
+- install instructions
+  -  does mac really have wget
+  -  .bashrc (linux)  vs. .bash_profile (mac)
+  - linux uses LD_LIBRARY_PATH, not DYLD_LIBRARY_PATH
+
+- plot_tp.py and plot_spectrum.py
+  should these have regression backup files so we can track future development?
+
+- if input/ not in current directory, how to supply it
+
+- should we provide convenience targets in Makefile to get things like
+  - git clone https://github.com/exoclime/LX-MIE
+
+
+- CUDA's bin needs to be in $PATH (e.g. ncu, cuda-memcheck
+sudo apt install nvidia-cuda-toolkit
+conda init bash
+
+
+with pip/pyenv
+
+source export_paths.bash 
+
+python3 -m venv my_venv
+source my_venv/bin/activate
+pip install pycuda
+
+pip install h5py
+pip install scipy
+pip install astropy
+pip install matplotlib
+
+
+python helios.py 
+
+### Welcome to HELIOS! This run has the name: 0. Enjoy the ride! ###
+
+Reading opacity file: ./input/r50_kdistr_solar_eq.h5
+
+Reading ./input/star_2022.h5/r50_kdistr/phoenix/gj1214 as spectral model of the host star.
+Looking up parameters of GJ_1214b in 'planet_database.py'.
+
+Starting with an isothermal TP-profile at 678.927 K.
+
+Energy budget corrected (increased) by 0.82 percent.
+
+We are running "0" at iteration step nr. : 0
+Layers (& surface/BOA) converged: 0 out of 106.
+...
+Final Check for numerical energy balance:
+  --> Theoretical effective temperature of planet: 
+        global (f=0.25): 570.907 K, 
+        day-side (f=2/3): 729.646 K, 
+        used in model (f=0.500): 678.927 K.
+  --> Incident TOA brightness temperature: 678.927 K 
+      Interior temperature: 30 K 
+      Outgoing (planetary) brightness temperature: 678.927 K
+  --> Global energy imbalance: 0.002ppm (positive: too much uptake, negative: too much loss). 
